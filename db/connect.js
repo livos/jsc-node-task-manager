@@ -1,11 +1,7 @@
 const mongoose = require("mongoose");
 
-require("dotenv").config();
-
-const connectionString = process.env.CONNECTION_STRING;
-
 const connectDB = (url) => {
-  return mongoose.connect(connectionString, {
+  return mongoose.connect(url, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
